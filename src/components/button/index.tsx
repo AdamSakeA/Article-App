@@ -11,10 +11,10 @@ interface ButtonProps {
 const Button = (props: ButtonProps) => {
   const { onClick, className, variant = "primary", children, ...rest } = props;
 
-  let buttonClasses = "px-[40px] py-2 rounded-full transition-shadow";
+  let buttonClasses = " py-2 rounded-full transition-all";
 
   if (variant === "primary") {
-    buttonClasses += " bg-black text-white shadow-md";
+    buttonClasses += " px-[40px] bg-black text-white shadow-md";
   } else if (variant === "secondary") {
     buttonClasses += " bg-gray-300 text-gray-700";
   }

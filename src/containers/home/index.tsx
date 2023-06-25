@@ -7,8 +7,8 @@ import ListArticle from "./list-article";
 export default function Home() {
   return (
     <>
-      <div className="py-[100px] px-[20px] w-full h-full bg-stone-100 lg:px-[100px]">
-        <div className="">
+      <div className="py-[200px] px-[20px] w-full h-full bg-stone-100 lg:px-[100px]">
+        <div className=" ]">
           <h1 className="font-bold text-4xl mb-5">
             Article Publish for our networks
           </h1>
@@ -23,9 +23,15 @@ export default function Home() {
         </div>
       </div>
       <TopTrendingSection payload={TOP_TRENDING} />
-      <div className="flex container mx-auto gap-4">
-        <ListArticle payload={ARTICLES} />
-        <DiscoverTopics payload={TOPICS} />
+      <div className="container mx-auto ">
+        <div className="flex flex-col-reverse md:grid grid-cols-8 gap-x-3">
+          <div className=" col-span-5">
+            <ListArticle payload={ARTICLES} />
+          </div>
+          <aside className="col-span-3">
+            <DiscoverTopics payload={TOPICS} />
+          </aside>
+        </div>
       </div>
     </>
   );

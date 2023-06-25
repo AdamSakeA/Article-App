@@ -1,4 +1,5 @@
 type Author = {
+  id: number;
   name: string;
   url: string;
 };
@@ -6,7 +7,7 @@ type Author = {
 export interface Article {
   title: string;
   articleDescription: string;
-  topic: string;
+  topic: string[];
   createdAt: string;
   img: {
     banner: string;

@@ -15,14 +15,14 @@ export default function DiscoverTopics({ payload }: DiscoverTopicsProps) {
     <Button
       key={i}
       variant="secondary"
-      className="hover:bg-slate-800 hover:text-white transition-colors w-fit"
+      className="hover:bg-slate-800 hover:text-white transition-colors w-fit text-sm px-[15px]"
     >
       {item.topicName}
     </Button>
   ));
 
   return (
-    <div className="container mx-auto ">
+    <div className="sticky top-[110px] mb-[100px]">
       <h1 className="mb-[10px] font-bold text-xl px-[20px]">
         Discover more topics of matters to you
       </h1>

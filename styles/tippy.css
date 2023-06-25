@@ -1,0 +1,6 @@
+@layer utilities {
+  .tippy-box[data-theme~="tomato"] {
+    background-color: tomato;
+    color: yellow;
+  }
+}
