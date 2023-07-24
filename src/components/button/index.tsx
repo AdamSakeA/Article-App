@@ -14,7 +14,7 @@ const Button = (props: ButtonProps) => {
   let buttonClasses = " py-2 rounded-full transition-all";
 
   if (variant === "primary") {
-    buttonClasses += " px-[40px] bg-black text-white shadow-md";
+    buttonClasses += " bg-black text-white shadow-md";
   } else if (variant === "secondary") {
     buttonClasses += " bg-gray-300 text-gray-700";
   }

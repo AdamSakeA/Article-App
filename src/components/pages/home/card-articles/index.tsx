@@ -1,8 +1,8 @@
 import { Articles } from "@/src/interfaces/Article";
 import Image from "next/image";
 import truncateText from "@/src/utils/truncateText";
-import Button from "../button";
-import Tooltip from "../tooltip";
+import Button from "../../../button";
+import Tooltip from "../../../tooltip";
 import { USER } from "@/config";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,8 +14,8 @@ interface CardArticleProps {
 export default function CardArticle({ article }: CardArticleProps) {
   const router = useRouter();
   const dataArticle = article.data;
-  const authorId = article.author.map((item) => item.id);
-  const dataUser = USER.find((user) => authorId.includes(user.id));
+  const authorId = article?.author?.map((item) => item.id);
+  const dataUser = USER.find((user) => authorId?.includes(user.id));
 
   const navigateTo = (tag: string) => {
     const url = `/topic/${tag}`;

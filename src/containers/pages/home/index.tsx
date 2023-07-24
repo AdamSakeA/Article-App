@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className="py-[200px] px-[20px] w-full h-full bg-stone-100 lg:px-[100px]">
-        <div className=" ]">
+        <div className="">
           <h1 className="font-bold text-4xl mb-5">
             Article Publish for our networks
           </h1>
@@ -17,7 +17,7 @@ export default function Home() {
             neque quae ex molestiae repellendus delectus temporibus autem rerum
             vitae labore?
           </p>
-          <Button className="mt-[20px] hover:shadow-yellow-300 ">
+          <Button className="px-[40px] mt-[20px] hover:shadow-yellow-300 ">
             Get Started
           </Button>
         </div>

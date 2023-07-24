@@ -18,6 +18,6 @@ export interface Article {
 
 export interface Articles {
   id: number;
-  author: Author[];
+  author?: Author[];
   data: Article;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import CardTopTrending from "@/src/components/card-top-trending";
+import CardTopTrending from "@/src/components/pages/home/card-top-trending";
 
 type Article = {
   id: number;

@@ -5,29 +5,51 @@ import { IoClose } from "react-icons/io5";
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
-import { Input } from "postcss";
+import { useEffect } from "react";
+import Footer from "../footer";
 
 const NavigationData = [
   {
     name: "About",
-    url: "#",
+    url: "/about",
   },
-  {
-    name: "Write",
-    url: "#",
-  },
-  {
-    name: "Categories",
-    url: "#",
-  },
+  // {
+  //   name: "Write",
+  //   url: "/write",
+  // },
+  // {
+  //   name: "Categories",
+  //   url: "/categories",
+  // },
 ];
 
-function Navigation() {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset === 0) {
+        setIsFixed(false);
+      } else {
+        setIsFixed(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg mb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={`w-full bg-white top-0 left-0 right-0 shadow-lg z-[999999] ${
+        isFixed ? "sticky " : ""
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-between">
             {/* Tombol untuk membuka/tutup navigasi pada layar mobile */}
@@ -57,7 +79,7 @@ function Navigation() {
                   return (
                     <Link
                       key={i}
-                      href={`/${item.url}`}
+                      href={item.url}
                       className="text-gray-600 hover:text-black px-3 py-2 rounded-md  font-light"
                     >
                       {item.name}
@@ -96,7 +118,7 @@ function Navigation() {
       >
         <div className="md:hidden">
           {/* Navigasi menu */}
-          <div className="px-2 pt-2 pb-3 sm:px-3">
+          <div className="px-2 pt-2 pb-3 sm:px-3 bg-white ">
             <input
               type="text"
               className=" border border-solid rounded-full text-sm px-3 py-2 w-full"
@@ -106,7 +128,7 @@ function Navigation() {
               return (
                 <Link
                   key={i}
-                  href={`/${item.url}`}
+                  href={item.url}
                   className="block text-gray-600 hover:text-gray-800 px-3 py-2 rounded-md font-medium"
                 >
                   {item.name}
@@ -114,58 +136,11 @@ function Navigation() {
               );
             })}
           </div>
-          <div className={` w-full left-0 h-screen bg-black opacity-50 `}></div>
+          <div
+            className={` w-full left-0 fixed h-screen z-[999999] bg-black opacity-50 `}
+          ></div>
         </div>
       </Transition>
     </nav>
   );
 }
-
-export default Navigation;
-
-// export default function Navigation() {
-//   const [isToggle, setIsToggle] = useState(false);
-
-//   const handleToggle = () => {
-//     setIsToggle((prevToggle) => !prevToggle);
-//   };
-
-//   return (
-//     <div className="container mx-auto py-[20px] px-[20px] flex justify-between items-center lg:px-0 ">
-//       {/* Mobile */}
-//       <div className="block md:hidden">
-//         {isToggle ? (
-//           <IoClose className=" text-2xl" onClick={handleToggle} />
-//         ) : (
-//           <FaBars className=" text-lg" onClick={handleToggle} />
-//         )}
-//         <div
-//           className={`${
-//             isToggle ? "block" : "hidden"
-//           } absolute top-[60px] w-full left-0 h-full`}
-//         >
-//           <div className={` bg-white p-[20px]`}>
-//             <h1>Berita</h1>
-//             <h1>our story</h1>
-//             <h1>Kategori</h1>
-//             <input type="text" className=" " />
-//           </div>
-//           {/* background */}
-//           <div className={` w-full left-0 h-screen bg-black opacity-50 `}></div>
-//         </div>
-//       </div>
-//       <h1 className="font-bold text-lg">Adam Articles</h1>
-//       {/* Desktop */}
-//       <div className=" hidden md:flex gap-5">
-//         <input type="text" className=" " />
-//         <h1>Berita</h1>
-//         <h1>our story</h1>
-//         <h1>Kategori</h1>
-//       </div>
-
-//       <div>
-//         <h1>Profile</h1>
-//       </div>
-//     </div>
-//   );
-// }

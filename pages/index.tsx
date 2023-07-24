@@ -1,6 +1,5 @@
-// import { useSession, signIn } from "next-auth/react";
 import { Layout } from "@/src/components";
-import Home from "@/src/containers/home";
+import Home from "@/src/containers/pages/home";
 
 export default function HomePage() {
   return (

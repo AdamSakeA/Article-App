@@ -1,14 +1,18 @@
-type Articles = {
+import { Article } from "./Article";
+
+export type Books = {
   id: number;
   title: string;
-  articleDescription: string;
-  topic: string | string[];
-  createdAt: string;
-  img: {
-    banner: string;
-    img1: string;
-    img2: string;
-  };
+  image: string;
+  description: string;
+  year: number;
+};
+
+export type Lists = {
+  id: number;
+  title: string;
+  list_saved: [];
+  description: string;
 };
 
 type DataUser = {
@@ -22,7 +26,9 @@ type DataUser = {
     background: string;
     user: string;
   };
-  article?: Articles[];
+  article?: Article[];
+  books?: Books[];
+  lists?: Lists[];
 };
 
 export interface UserInterface {

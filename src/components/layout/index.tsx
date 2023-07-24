@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Navigation from "../navigation";
+import Footer from "../footer";
 
 interface LayoutProps {
   title: string;
@@ -20,6 +21,7 @@ export default function Layout({ title, children }: LayoutProps) {
       </Head>
       <Navigation />
       <main className={`${inter.className}`}>{children}</main>
+      <Footer />
     </>
   );
 }

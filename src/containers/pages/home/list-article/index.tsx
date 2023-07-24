@@ -1,6 +1,6 @@
 import React from "react";
 import { Articles } from "@/src/interfaces/Article";
-import CardArticle from "@/src/components/card-articles";
+import CardArticle from "@/src/components/pages/home/card-articles";
 
 interface ListArticleProps {
   payload: Articles[];
