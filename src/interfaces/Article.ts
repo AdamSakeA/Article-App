@@ -1,9 +1,3 @@
-type Author = {
-  id: number;
-  name: string;
-  url: string;
-};
-
 export interface Article {
   title: string;
   articleDescription: string;
@@ -18,6 +12,6 @@ export interface Article {
 
 export interface Articles {
   id: number;
-  author?: Author[];
+  author_id: number;
   data: Article;
 }

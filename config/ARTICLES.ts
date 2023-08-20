@@ -1,13 +1,7 @@
 const ARTICLES = [
   {
     id: 121039,
-    author: [
-      {
-        id: 3,
-        name: "Annisa Mutia",
-        url: "",
-      },
-    ],
+    author_id: 3,
     data: {
       title: "Resmi IPO, VKTR Andalkan Bisnis Suplai Kendaraan Listrik",
       articleDescription: `PT VKTR Teknologi Mobilitas Tbk. (VKTR)–perusahaan yang bergerak di sektor perdagangan kendaraan listrik berbasis baterai–memilih model bisnis ke pemerintah (B2G) dan emiten lainnya (B2B) sebagai roda bisnis utamanya. Perusahaan tersebut kini tengah menyasar segmen B2G dengan menyuplai permintaan kendaraan listrik, salah satunya adalah bus listrik. Bisnis suplai bus listrik ini dianggap menjanjikan mengingat operator moda transportasi besar seperti TransJakarta sebelumnya berencana bakal mengoperasikan 10.000 bus listrik hingga 2030 mendatang. Tahun 2022 lalu, anak perusahaan grup Bakrie tersebut sebelumnya telah menandatangani nota kesepahaman dengan TransJakarta untuk mengubah sekitar 3.000 unit bus diesel menjadi listrik (retrofit). Hingga akhir Mei 2023, Kontan melaporkan pihak VKTR telah memasok lebih dari 52 unit bus kepada TransJakarta. “Kita ingin kontribusi di Transjakarta lebih banyak lagi, karena Transjakarta menargetkan 10 ribu bus pada akhir tahun 2030. Jadi semaksimal mungkin kita bisa berkontribusi, kita usahakan,” kata Direktur Utama VKTR Gilarsi W. Setijono sebagaimana dikutip dari Viva.`,
@@ -23,13 +17,7 @@ const ARTICLES = [
   },
   {
     id: 4124536,
-    author: [
-      {
-        id: 1,
-        name: "Adam Sake Arfansyah",
-        url: "",
-      },
-    ],
+    author_id: 1,
     data: {
       title: "Resmi IPO, VKTR Andalkan Bisnis Suplai Kendaraan Listrik",
       articleDescription: `PT VKTR Teknologi Mobilitas Tbk. (VKTR)–perusahaan yang bergerak di sektor perdagangan kendaraan listrik berbasis baterai–memilih model bisnis ke pemerintah (B2G) dan emiten lainnya (B2B) sebagai roda bisnis utamanya. Perusahaan tersebut kini tengah menyasar segmen B2G dengan menyuplai permintaan kendaraan listrik, salah satunya adalah bus listrik. Bisnis suplai bus listrik ini dianggap menjanjikan mengingat operator moda transportasi besar seperti TransJakarta sebelumnya berencana bakal mengoperasikan 10.000 bus listrik hingga 2030 mendatang. Tahun 2022 lalu, anak perusahaan grup Bakrie tersebut sebelumnya telah menandatangani nota kesepahaman dengan TransJakarta untuk mengubah sekitar 3.000 unit bus diesel menjadi listrik (retrofit). Hingga akhir Mei 2023, Kontan melaporkan pihak VKTR telah memasok lebih dari 52 unit bus kepada TransJakarta. “Kita ingin kontribusi di Transjakarta lebih banyak lagi, karena Transjakarta menargetkan 10 ribu bus pada akhir tahun 2030. Jadi semaksimal mungkin kita bisa berkontribusi, kita usahakan,” kata Direktur Utama VKTR Gilarsi W. Setijono sebagaimana dikutip dari Viva.`,
@@ -45,13 +33,7 @@ const ARTICLES = [
   },
   {
     id: 43423,
-    author: [
-      {
-        id: 2,
-        name: "Amelyah",
-        url: "",
-      },
-    ],
+    author_id: 1,
     data: {
       title: "Resmi IPO, VKTR Andalkan Bisnis Suplai Kendaraan Listrik",
       articleDescription: `PT VKTR Teknologi Mobilitas Tbk. (VKTR)–perusahaan yang bergerak di sektor perdagangan kendaraan listrik berbasis baterai–memilih model bisnis ke pemerintah (B2G) dan emiten lainnya (B2B) sebagai roda bisnis utamanya. Perusahaan tersebut kini tengah menyasar segmen B2G dengan menyuplai permintaan kendaraan listrik, salah satunya adalah bus listrik. Bisnis suplai bus listrik ini dianggap menjanjikan mengingat operator moda transportasi besar seperti TransJakarta sebelumnya berencana bakal mengoperasikan 10.000 bus listrik hingga 2030 mendatang. Tahun 2022 lalu, anak perusahaan grup Bakrie tersebut sebelumnya telah menandatangani nota kesepahaman dengan TransJakarta untuk mengubah sekitar 3.000 unit bus diesel menjadi listrik (retrofit). Hingga akhir Mei 2023, Kontan melaporkan pihak VKTR telah memasok lebih dari 52 unit bus kepada TransJakarta. “Kita ingin kontribusi di Transjakarta lebih banyak lagi, karena Transjakarta menargetkan 10 ribu bus pada akhir tahun 2030. Jadi semaksimal mungkin kita bisa berkontribusi, kita usahakan,” kata Direktur Utama VKTR Gilarsi W. Setijono sebagaimana dikutip dari Viva.`,
@@ -67,13 +49,7 @@ const ARTICLES = [
   },
   {
     id: 102345,
-    author: [
-      {
-        id: 4,
-        name: "Tite Ayu",
-        url: "",
-      },
-    ],
+    author_id: 4,
     data: {
       title: "Resmi IPO, VKTR Andalkan Bisnis Suplai Kendaraan Listrik",
       articleDescription: `PT VKTR Teknologi Mobilitas Tbk. (VKTR)–perusahaan yang bergerak di sektor perdagangan kendaraan listrik berbasis baterai–memilih model bisnis ke pemerintah (B2G) dan emiten lainnya (B2B) sebagai roda bisnis utamanya. Perusahaan tersebut kini tengah menyasar segmen B2G dengan menyuplai permintaan kendaraan listrik, salah satunya adalah bus listrik. Bisnis suplai bus listrik ini dianggap menjanjikan mengingat operator moda transportasi besar seperti TransJakarta sebelumnya berencana bakal mengoperasikan 10.000 bus listrik hingga 2030 mendatang. Tahun 2022 lalu, anak perusahaan grup Bakrie tersebut sebelumnya telah menandatangani nota kesepahaman dengan TransJakarta untuk mengubah sekitar 3.000 unit bus diesel menjadi listrik (retrofit). Hingga akhir Mei 2023, Kontan melaporkan pihak VKTR telah memasok lebih dari 52 unit bus kepada TransJakarta. “Kita ingin kontribusi di Transjakarta lebih banyak lagi, karena Transjakarta menargetkan 10 ribu bus pada akhir tahun 2030. Jadi semaksimal mungkin kita bisa berkontribusi, kita usahakan,” kata Direktur Utama VKTR Gilarsi W. Setijono sebagaimana dikutip dari Viva.`,
@@ -89,13 +65,7 @@ const ARTICLES = [
   },
   {
     id: 99999,
-    author: [
-      {
-        id: 4,
-        name: "Tite Ayu",
-        url: "",
-      },
-    ],
+    author_id: 4,
     data: {
       title: "Resmi IPO, VKTR Andalkan Bisnis Suplai Kendaraan Listrik",
       articleDescription: `PT VKTR Teknologi Mobilitas Tbk. (VKTR)–perusahaan yang bergerak di sektor perdagangan kendaraan listrik berbasis baterai–memilih model bisnis ke pemerintah (B2G) dan emiten lainnya (B2B) sebagai roda bisnis utamanya. Perusahaan tersebut kini tengah menyasar segmen B2G dengan menyuplai permintaan kendaraan listrik, salah satunya adalah bus listrik. Bisnis suplai bus listrik ini dianggap menjanjikan mengingat operator moda transportasi besar seperti TransJakarta sebelumnya berencana bakal mengoperasikan 10.000 bus listrik hingga 2030 mendatang. Tahun 2022 lalu, anak perusahaan grup Bakrie tersebut sebelumnya telah menandatangani nota kesepahaman dengan TransJakarta untuk mengubah sekitar 3.000 unit bus diesel menjadi listrik (retrofit). Hingga akhir Mei 2023, Kontan melaporkan pihak VKTR telah memasok lebih dari 52 unit bus kepada TransJakarta. “Kita ingin kontribusi di Transjakarta lebih banyak lagi, karena Transjakarta menargetkan 10 ribu bus pada akhir tahun 2030. Jadi semaksimal mungkin kita bisa berkontribusi, kita usahakan,” kata Direktur Utama VKTR Gilarsi W. Setijono sebagaimana dikutip dari Viva.`,
@@ -111,13 +81,7 @@ const ARTICLES = [
   },
   {
     id: 213455,
-    author: [
-      {
-        id: 2,
-        name: "Amelyah",
-        url: "",
-      },
-    ],
+    author_id: 2,
     data: {
       title: "Resmi IPO, VKTR Andalkan Bisnis Suplai Kendaraan Listrik",
       articleDescription: `PT VKTR Teknologi Mobilitas Tbk. (VKTR)–perusahaan yang bergerak di sektor perdagangan kendaraan listrik berbasis baterai–memilih model bisnis ke pemerintah (B2G) dan emiten lainnya (B2B) sebagai roda bisnis utamanya. Perusahaan tersebut kini tengah menyasar segmen B2G dengan menyuplai permintaan kendaraan listrik, salah satunya adalah bus listrik. Bisnis suplai bus listrik ini dianggap menjanjikan mengingat operator moda transportasi besar seperti TransJakarta sebelumnya berencana bakal mengoperasikan 10.000 bus listrik hingga 2030 mendatang. Tahun 2022 lalu, anak perusahaan grup Bakrie tersebut sebelumnya telah menandatangani nota kesepahaman dengan TransJakarta untuk mengubah sekitar 3.000 unit bus diesel menjadi listrik (retrofit). Hingga akhir Mei 2023, Kontan melaporkan pihak VKTR telah memasok lebih dari 52 unit bus kepada TransJakarta. “Kita ingin kontribusi di Transjakarta lebih banyak lagi, karena Transjakarta menargetkan 10 ribu bus pada akhir tahun 2030. Jadi semaksimal mungkin kita bisa berkontribusi, kita usahakan,” kata Direktur Utama VKTR Gilarsi W. Setijono sebagaimana dikutip dari Viva.`,

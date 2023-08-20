@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/router";
+
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
-import Image from "next/image";
 import { Transition } from "@headlessui/react";
-import Link from "next/link";
-import { useEffect } from "react";
-import Footer from "../footer";
+import { Icon } from "@iconify/react";
 
 const NavigationData = [
   {
@@ -27,6 +28,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,9 +70,13 @@ export default function Navigation() {
             </div>
 
             <div className="flex-shrink-0 ml-4 md:ml-0">
-              <Link href="/" className="font-bold text-xl">
-                Adams Article
-              </Link>
+              <Image
+                src={"../favs-logo.svg"}
+                width={30}
+                height={44}
+                alt={"logo-favs"}
+                onClick={() => router.push("/")}
+              />
             </div>
             <div className="hidden md:block">
               {/* Navigasi menu */}
@@ -86,11 +92,14 @@ export default function Navigation() {
                     </Link>
                   );
                 })}
-                <input
-                  type="text"
-                  className=" border border-solid rounded-full text-sm px-3 py-0.5"
-                  placeholder="Search on adams.."
-                />
+                <div className=" flex items-center gap-2 border border-[ABABAB] border-solid rounded-full text-sm px-2 py-0.5">
+                  <Icon icon="iconamoon:search-light" />
+                  <input
+                    type="text"
+                    className=" border-none outline-none"
+                    placeholder="Search on adams.."
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -119,11 +128,14 @@ export default function Navigation() {
         <div className="md:hidden">
           {/* Navigasi menu */}
           <div className="px-2 pt-2 pb-3 sm:px-3 bg-white ">
-            <input
-              type="text"
-              className=" border border-solid rounded-full text-sm px-3 py-2 w-full"
-              placeholder="Search on adams.."
-            />
+            <div className=" flex items-center gap-2 border border-[ABABAB] border-solid rounded-full text-sm px-2 py-0.5">
+              <Icon icon="iconamoon:search-light" />
+              <input
+                type="text"
+                className=" border-none outline-none"
+                placeholder="Search on adams.."
+              />
+            </div>
             {NavigationData.map((item, i) => {
               return (
                 <Link

@@ -1,15 +1,8 @@
-import React from "react";
 import CardTopTrending from "@/src/components/pages/home/card-top-trending";
-
-type Article = {
-  id: number;
-  title: string;
-  author: string;
-  createdAt: string;
-};
+import { TopTrendingInterface } from "@/src/interfaces/TopTrending";
 
 interface TopTrendingSectionProps {
-  payload: Article[];
+  payload: TopTrendingInterface[];
 }
 
 export default function TopTrendingSection(props: TopTrendingSectionProps) {
@@ -21,8 +14,8 @@ export default function TopTrendingSection(props: TopTrendingSectionProps) {
 
   return (
     <div className="container mx-auto m-[100px]">
-      <h1 className="mb-[10px] font-bold text-xl px-[20px]">
-        Hot Trending on Adam
+      <h1 className="mb-[10px] font-bold text-xl px-[20px] font-serif">
+        Hot Trending on Favs
       </h1>
       <hr />
       <div className="mt-[20px] flex flex-col gap-5 px-[20px] md:flex-row flex-wrap justify-center">

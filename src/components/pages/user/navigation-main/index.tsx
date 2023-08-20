@@ -1,4 +1,3 @@
-import React from "react";
 import { EnumMainType } from "@/src/interfaces/EnumMainType";
 import { Dispatch, SetStateAction } from "react";
 import { UserInterface } from "@/src/interfaces/User";

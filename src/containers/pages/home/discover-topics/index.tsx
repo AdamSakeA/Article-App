@@ -1,5 +1,4 @@
 import Button from "@/src/components/button";
-import React from "react";
 
 type Topic = {
   id: number;
@@ -30,7 +29,7 @@ export default function DiscoverTopics({ payload }: DiscoverTopicsProps) {
       <div className="mt-[20px] flex gap-5 px-[20px] md:flex-row flex-wrap justify-start">
         {showTopics}
       </div>
-      <p className="text-yellow-600 text-sm font-light w-fit my-[20px] px-[20px] cursor-pointer hover:text-black transition-colors">
+      <p className="text-gray-600 text-sm font-light w-fit my-[20px] px-[20px] cursor-pointer hover:text-black transition-colors">
         Discover more topics
       </p>
     </div>

@@ -11,5 +11,12 @@ export default function ListArticleMain({ payload }: ListArticleMainProps) {
     <CardArticleMain article={item} key={i} />
   ));
 
+  if (!payload)
+    return (
+      <>
+        <h1>Article is not found</h1>
+      </>
+    );
+
   return <>{showCard}</>;
 }
