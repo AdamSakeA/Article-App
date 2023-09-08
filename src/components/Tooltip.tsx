@@ -4,7 +4,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/themes/light.css";
 
-import Button from "../button";
+import Button from "./Button";
 import { UserInterface } from "@/src/interfaces/User";
 import formatNumber from "@/src/utils/formatNumber";
 import Link from "next/link";
@@ -32,9 +32,7 @@ export default function Tooltip({ payload, children }: TooltipProps) {
             <Link href={`/${payload?.username}`} className=" font-bold text-lg">
               {payload?.data.name}
             </Link>
-            <p className=" font-light text-xs text-gray-600">
-              {payload?.data.bio}
-            </p>
+            <p className=" font-light text-xs text-gray-600">{payload?.data.bio}</p>
           </div>
         </div>
         <hr />
@@ -42,9 +40,7 @@ export default function Tooltip({ payload, children }: TooltipProps) {
           <h2 className=" text-sm text-gray-400">
             Followers {formatNumber(payload?.data.followers || 0)}
           </h2>
-          <Button className="px-4 text-xs font-light bg-yellow-500">
-            Follow
-          </Button>
+          <Button className="px-4 text-xs font-light bg-yellow-500">Follow</Button>
         </div>
       </div>
     );

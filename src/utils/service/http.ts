@@ -1,6 +1,7 @@
 import axios, { AxiosResponse, AxiosError, AxiosRequestConfig } from "axios";
 import { AuthInterface } from "@/src/interfaces/AuthInterface";
 import jwtDecode from "jwt-decode";
+import { setAuthCookie } from "./auth";
 
 const Http = axios.create({
   baseURL: "http://localhost:7000/",
@@ -11,7 +12,7 @@ const Http = axios.create({
 
 Http.interceptors.request.use(
   async (req) => {
-    const autHeader = req.headers?.Authorization;
+    const autHeader = req.headers.Authorization;
     const currentToken = autHeader && autHeader.toString().split(" ")[1];
     const decode: any = currentToken && jwtDecode(currentToken);
     const expired = decode?.exp;
@@ -29,7 +30,9 @@ Http.interceptors.request.use(
         token: resData.data.data.token,
       };
 
-      req!.headers!.Authorization = `Bearer ${resData.data.data.token}`;
+      req.headers.Authorization = `Bearer ${resData.data.data.token}`;
+
+      setAuthCookie(response);
     }
 
     return req;

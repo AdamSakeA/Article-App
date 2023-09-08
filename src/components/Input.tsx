@@ -1,13 +1,13 @@
 import React, { FC, InputHTMLAttributes } from "react";
 
-interface CustomInputAttributes extends InputHTMLAttributes<HTMLInputElement> {
+interface InputAttributes extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label?: string | null;
   error?: string | null;
   required: boolean;
 }
 
-const CustomInput: FC<CustomInputAttributes> = ({ name, label, error, required, ...rest }) => {
+const Input: FC<InputAttributes> = ({ name, label, error, required, ...rest }) => {
   return (
     <div>
       <input
@@ -20,4 +20,4 @@ const CustomInput: FC<CustomInputAttributes> = ({ name, label, error, required, 
   );
 };
 
-export default CustomInput;
+export default Input;

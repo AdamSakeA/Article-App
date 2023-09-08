@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import Navigation from "../navigation";
-import Footer from "../footer";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 interface LayoutProps {
   title: string;

@@ -1,4 +1,4 @@
-import CardArticle from "./card-articles";
-import CardTopTrending from "./card-top-trending";
+import CardArticle from "./CardArticle";
+import CardTopTrending from "./CardTopTrending";
 
 export { CardArticle, CardTopTrending };

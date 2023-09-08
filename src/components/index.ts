@@ -1,6 +1,6 @@
-import Layout from "./layout";
-import Button from "./button";
-import Navigation from "./navigation";
-import Tooltip from "./tooltip";
+import Layout from "./Layout";
+import Button from "./Button";
+import Navigation from "./Navigation";
+import Tooltip from "./Tooltip";
 
 export { Layout, Button, Navigation, Tooltip };

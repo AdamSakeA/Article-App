@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationCategory from "@/src/components/pages/category/explore-category";
+import NavigationCategory from "@/src/components/pages/category/NavigationCategory";
 
 export default function CategoryPage({ category }: { category: string }) {
   return (
@@ -10,11 +10,7 @@ export default function CategoryPage({ category }: { category: string }) {
   );
 }
 
-export async function getServerSideProps({
-  params,
-}: {
-  params: { category: string };
-}) {
+export async function getServerSideProps({ params }: { params: { category: string } }) {
   const { category } = params;
 
   // Lakukan pengambilan data dari database atau API berdasarkan slug

@@ -22,9 +22,7 @@ export default function Profile({ payload }: ProfileProps) {
         className="rounded-full object-cover"
       />
       <h1 className=" text-lg font-semibold mt-4">{user.name}</h1>
-      <h2 className=" text-gray-500 mb-4">
-        {formatNumber(user.followers)} Followers
-      </h2>
+      <h2 className=" text-gray-500 mb-4">{formatNumber(user.followers)} Followers</h2>
       <p className=" text-sm text-gray-500">{user.bio}</p>
       <div className=" flex gap-4 mt-[20px]">
         <Button className=" bg-yellow-600 px-5 text-sm">Follow</Button>

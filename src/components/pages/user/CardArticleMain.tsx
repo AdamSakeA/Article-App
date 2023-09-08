@@ -35,9 +35,7 @@ export default function CardArticleMain({ article }: CardArticleMainProps) {
   return (
     <div className="flex gap-4 mb-[50px]">
       <div>
-        <h1 className="font-bold text-md md:text-lg">
-          {truncateText(article?.title || "", 45)}
-        </h1>
+        <h1 className="font-bold text-md md:text-lg">{truncateText(article?.title || "", 45)}</h1>
         <p className="hidden font-light text-md text-gray-500 md:block md:text-sm">
           {truncateText(article?.articleDescription || "", 80)}
         </p>
@@ -47,12 +45,7 @@ export default function CardArticleMain({ article }: CardArticleMainProps) {
         </div>
       </div>
       <div className="w-[200px] h-[100px] relative md:h-[150px]">
-        <Image
-          src={article?.img.banner || ""}
-          alt="Image Banner"
-          fill
-          className=" object-cover"
-        />
+        <Image src={article?.img.banner || ""} alt="Image Banner" fill className=" object-cover" />
       </div>
     </div>
   );

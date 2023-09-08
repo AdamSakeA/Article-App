@@ -7,10 +7,7 @@ interface NavigateMainProps {
   setMainType: Dispatch<SetStateAction<string>>;
 }
 
-export default function NavigationMain({
-  setMainType,
-  payload,
-}: NavigateMainProps) {
+export default function NavigationMain({ setMainType, payload }: NavigateMainProps) {
   const changeFieldMain = (name: string) => {
     setMainType(name);
   };
@@ -24,24 +21,17 @@ export default function NavigationMain({
         >
           {EnumMainType.Home}
         </li>
-        <li
-          className="cursor-pointer"
-          onClick={() => changeFieldMain(EnumMainType.About)}
-        >
+        <li className="cursor-pointer" onClick={() => changeFieldMain(EnumMainType.About)}>
           {EnumMainType.About}
         </li>
         <li
-          className={` cursor-pointer ${
-            payload?.data?.books?.length !== 0 ? "block" : "hidden"
-          }`}
+          className={` cursor-pointer ${payload?.data?.books?.length !== 0 ? "block" : "hidden"}`}
           onClick={() => changeFieldMain(EnumMainType.Books)}
         >
           {EnumMainType.Books}
         </li>
         <li
-          className={` cursor-pointer ${
-            payload?.data?.lists?.length !== 0 ? "block" : "hidden"
-          }`}
+          className={` cursor-pointer ${payload?.data?.lists?.length !== 0 ? "block" : "hidden"}`}
           onClick={() => changeFieldMain(EnumMainType.Lists)}
         >
           {EnumMainType.Lists}

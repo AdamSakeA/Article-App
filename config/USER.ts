@@ -3,6 +3,7 @@ const USER = [
     id: 1,
     username: "@adamsakea",
     password: "1234",
+    token: "awdifjwaopdkpawok",
     data: {
       name: "Adam Sake Arfansyah",
       email: "adam@mail.com",

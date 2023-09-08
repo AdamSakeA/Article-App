@@ -96,9 +96,7 @@ export default function Navigation() {
             </div>
           </div>
           <Image
-            src={
-              "https://raw.githubusercontent.com/Damskuuii/image/main/esteh.jpeg"
-            }
+            src={"https://raw.githubusercontent.com/Damskuuii/image/main/esteh.jpeg"}
             alt={"tst"}
             width={30}
             height={30}
@@ -140,9 +138,7 @@ export default function Navigation() {
               );
             })}
           </div>
-          <div
-            className={` w-full left-0 fixed h-screen z-[999999] bg-black opacity-50 `}
-          ></div>
+          <div className={` w-full left-0 fixed h-screen z-[999999] bg-black opacity-50 `}></div>
         </div>
       </Transition>
     </nav>

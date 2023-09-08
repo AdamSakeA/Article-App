@@ -2,8 +2,8 @@ import { EnumMainType } from "@/src/interfaces/EnumMainType";
 import { Dispatch, SetStateAction } from "react";
 import { NavigationMain } from "@/src/components/pages/user";
 import { UserInterface } from "@/src/interfaces/User";
-import { CardArticleMain, AboutMain } from "@/src/components/pages/user/";
-import ListArticleMain from "../list-article-main";
+import { AboutMain } from "@/src/components/pages/user/";
+import ListArticleMain from "./ListArticleMain";
 
 interface MainProps {
   payload?: UserInterface;

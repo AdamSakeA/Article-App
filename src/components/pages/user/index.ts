@@ -1,5 +1,5 @@
-import NavigationMain from "./navigation-main";
-import AboutMain from "./about-main";
-import CardArticleMain from "./card-article-main";
+import NavigationMain from "./NavigationMain";
+import AboutMain from "./AboutMain";
+import CardArticleMain from "./CardArticleMain";
 
 export { NavigationMain, AboutMain, CardArticleMain };

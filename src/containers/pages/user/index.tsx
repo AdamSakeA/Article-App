@@ -1,9 +1,8 @@
-import React from "react";
 import { UserInterface } from "@/src/interfaces/User";
 import { useState } from "react";
 import Image from "next/image";
-import Main from "./main";
-import Profile from "./profile";
+import Main from "./Main";
+import Profile from "./Profile";
 
 interface UserProps {
   payload: UserInterface;

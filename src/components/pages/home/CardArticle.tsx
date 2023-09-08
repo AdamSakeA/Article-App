@@ -3,8 +3,8 @@ import { USER } from "@/config";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import truncateText from "@/src/utils/truncateText";
-import Button from "../../../button";
-import Tooltip from "../../../tooltip";
+import Button from "../../Button";
+import Tooltip from "../../Tooltip";
 import Link from "next/link";
 
 interface CardArticleProps {
@@ -57,9 +57,7 @@ export default function CardArticle({ article }: CardArticleProps) {
           </div>
         </Tooltip>
         <div>
-          <h1 className="font-bold text-md md:text-lg">
-            {truncateText(dataArticle.title, 45)}
-          </h1>
+          <h1 className="font-bold text-md md:text-lg">{truncateText(dataArticle.title, 45)}</h1>
         </div>
         <p className="hidden font-light text-md text-gray-500 md:block md:text-sm">
           {truncateText(dataArticle.articleDescription, 80)}
@@ -70,12 +68,7 @@ export default function CardArticle({ article }: CardArticleProps) {
         </div>
       </div>
       <div className="w-[200px] h-[100px] relative md:h-[150px]">
-        <Image
-          src={dataArticle.img.banner}
-          alt="Image Banner"
-          fill
-          className=" object-cover"
-        />
+        <Image src={dataArticle.img.banner} alt="Image Banner" fill className=" object-cover" />
       </div>
     </div>
   );

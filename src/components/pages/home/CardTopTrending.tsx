@@ -25,9 +25,7 @@ export default function CardTopTrending(props: CardTopTrendingProps) {
         <p className="text-sm font-medium">{user?.data.name}</p>
       </div>
       <h1 className="font-bold truncate">{payload.title}</h1>
-      <p className="text-sm font-light text-gray-500 mt-3">
-        {payload.createdAt}
-      </p>
+      <p className="text-sm font-light text-gray-500 mt-3">{payload.createdAt}</p>
     </div>
   );
 }
