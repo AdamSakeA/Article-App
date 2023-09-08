@@ -14,14 +14,6 @@ const NavigationData = [
     name: "About",
     url: "/about",
   },
-  // {
-  //   name: "Write",
-  //   url: "/write",
-  // },
-  // {
-  //   name: "Categories",
-  //   url: "/categories",
-  // },
 ];
 
 export default function Navigation() {
@@ -51,7 +43,7 @@ export default function Navigation() {
         isFixed ? "sticky " : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-between">
             {/* Tombol untuk membuka/tutup navigasi pada layar mobile */}

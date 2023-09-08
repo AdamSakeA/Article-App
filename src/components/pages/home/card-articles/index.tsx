@@ -38,9 +38,9 @@ export default function CardArticle({ article }: CardArticleProps) {
 
   return (
     <div className="flex gap-4 mb-[50px]">
-      <div>
+      <div className="">
         <Tooltip payload={dataUser}>
-          <div className="flex w-fit items-center gap-2 cursor-pointer">
+          <div className="flex w-fit items-center gap-2 cursor-pointer mb-[10px]">
             <Image
               src={dataUser?.data.profile_img.user || ""}
               alt={dataUser?.username || ""}

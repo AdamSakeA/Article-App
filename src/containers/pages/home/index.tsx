@@ -22,9 +22,11 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <TopTrendingSection payload={TOP_TRENDING} />
-      <div className="container mx-auto ">
-        <div className="flex flex-col-reverse md:grid grid-cols-8 gap-x-3">
+      <div className="mx-[20px] my-[100px] lg:mx-[100px]">
+        <TopTrendingSection payload={TOP_TRENDING} />
+      </div>
+      <div className="container mx-auto px-[20px] lg:px-[100px]">
+        <div className="flex flex-col-reverse md:grid grid-cols-8 gap-x-4">
           <div className=" col-span-5">
             <ListArticle payload={ARTICLES} />
           </div>
