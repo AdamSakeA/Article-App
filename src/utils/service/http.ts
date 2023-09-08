@@ -1,4 +1,5 @@
 import axios, { AxiosResponse, AxiosError, AxiosRequestConfig } from "axios";
+import { AuthInterface } from "@/src/interfaces/AuthInterface";
 import jwtDecode from "jwt-decode";
 
 const Http = axios.create({
@@ -7,12 +8,6 @@ const Http = axios.create({
     "Content-Type": "application/json",
   },
 });
-
-interface AuthInterface {
-  id: string;
-  email: string;
-  token: string;
-}
 
 Http.interceptors.request.use(
   async (req) => {
