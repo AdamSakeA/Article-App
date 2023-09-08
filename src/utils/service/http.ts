@@ -1,9 +1,5 @@
-import axios, {
-  AxiosResponse,
-  AxiosError,
-  InternalAxiosRequestConfig,
-  AxiosRequestConfig,
-} from "axios";
+import axios, { AxiosResponse, AxiosError, AxiosRequestConfig } from "axios";
+import jwtDecode from "jwt-decode";
 
 const Http = axios.create({
   baseURL: "http://localhost:7000/",
@@ -12,12 +8,41 @@ const Http = axios.create({
   },
 });
 
-Http.interceptors.request.use(async (req: AxiosRequestConfig) => {
-  if (req?.headers?.Authorization) {
-    return req.headers.Authorization;
+interface AuthInterface {
+  id: string;
+  email: string;
+  token: string;
+}
+
+Http.interceptors.request.use(
+  async (req: AxiosRequestConfig) => {
+    const autHeader = req.headers?.Authorization;
+    const currentToken = autHeader && autHeader.toString().split(" ")[1];
+    const decode: any = currentToken && jwtDecode(currentToken);
+    const expired = decode?.exp;
+
+    const currentDate = new Date();
+
+    if (expired * 1000 < currentDate.getTime()) {
+      const resData = await Http.get("http://localhost:7000/admin/refresh-token", {
+        withCredentials: true,
+      });
+
+      const response: AuthInterface = {
+        id: resData.data.data.id,
+        email: resData.data.data.email,
+        token: resData.data.data.token,
+      };
+
+      req!.headers!.Authorization = `Bearer ${resData.data.data.token}`;
+    }
+
+    return req;
+  },
+  (error) => {
+    return Promise.reject(error);
   }
-  return req;
-});
+);
 
 Http.interceptors.response.use(
   (response: AxiosResponse) => {
