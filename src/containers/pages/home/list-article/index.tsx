@@ -11,5 +11,5 @@ export default function ListArticle({ payload }: ListArticleProps) {
     <CardArticle key={i} article={item} />
   ));
 
-  return <div className="container mx-auto px-[20px]">{showArticles}</div>;
+  return <div className="container mx-auto">{showArticles}</div>;
 }
