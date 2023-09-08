@@ -15,7 +15,7 @@ interface AuthInterface {
 }
 
 Http.interceptors.request.use(
-  async (req: AxiosRequestConfig) => {
+  async (req) => {
     const autHeader = req.headers?.Authorization;
     const currentToken = autHeader && autHeader.toString().split(" ")[1];
     const decode: any = currentToken && jwtDecode(currentToken);
